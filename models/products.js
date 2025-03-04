@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../util/database");
 
-const Product = sequelize.define("Product", {  // Changed to "Product" for consistency
+const Product = sequelize.define("products", {
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -13,9 +13,14 @@ const Product = sequelize.define("Product", {  // Changed to "Product" for consi
     allowNull: false,
   },
   price: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
   },
 });
+
+// Define associations
+Product.associate = (models) => {
+  Product.hasMany(models.OrderLineItem, { foreignKey: 'product_id' });
+};
 
 module.exports = Product;

@@ -1,8 +1,9 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("ks-store", "root", "9823117083", {
+const sequelize = new Sequelize("icc", "root", "admin123", {
+
   dialect: "mysql",
-  host: "localhost",
+  host: "127.0.0.1",
 });
 
 module.exports = sequelize;

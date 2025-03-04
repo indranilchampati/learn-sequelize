@@ -1,31 +1,33 @@
-const Sequelize = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("../util/database");
 
-const Order = require("./order"); // Import Order model
-
-const Customer = sequelize.define("customer", {
-
-
-
+/**
+ * Customer model
+ */
+const Customer = sequelize.define("customers", {
   id: {
-    type: Sequelize.INTEGER,
+    type: DataTypes.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
   },
+  /**
+   * Name of the customer.
+   */
   name: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  email: {
-    type: Sequelize.STRING,
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });
 
-Customer.hasMany(Order, { foreignKey: 'customerId' }); // Establish relationship
-Order.belongsTo(Customer, { foreignKey: 'customerId' }); // Establish reverse relationship
-
-
+Customer.associate = (models) => {
+  Customer.hasMany(models.Order, { foreignKey: "customer_id", as: "customer_orders_list" });
+  Customer.belongsToMany(models.Order, {
+    through: models.CustomerOrder,
+    foreignKey: "customer_id",
+    otherKey: "order_id",
+    as: "customer_orders_many",
+  });
+};
 
 module.exports = Customer;
