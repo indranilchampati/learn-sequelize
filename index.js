@@ -2,9 +2,8 @@ const { sequelize, Customer, Order, Product, OrderLineItem, OrderPayment, Custom
 
 (async () => {
   try {
-    await sequelize.sync({ force: true }); // Use force: true for development only
+    await sequelize.sync({ force: true }); 
 
-    // Create test data
     const customer = await Customer.create({
       name: "Indranil Champati",
       email: "indranil@gmail.com",

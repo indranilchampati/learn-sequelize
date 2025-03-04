@@ -19,7 +19,7 @@ const CustomerOrder = sequelize.define("customer_orders", {
   },
 });
 
-// Remove the `associate` method here since we define associations in `models/index.js`
+// Remove the associate method here mod/index.js
 
 CustomerOrder.beforeCreate(() => logger.info("Creating new CustomerOrder instance"));
 CustomerOrder.afterCreate(() => logger.info("CustomerOrder instance created successfully"));
