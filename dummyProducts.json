@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "India T-Shirt",
+        "price": 200.00,
+        "description": "India Cricket T Shirt"
+    },
+    {
+        "id": 2,
+        "name": "Germany T-Shirt",
+        "price": 150.00,
+        "description": "Football Team"
+    },
+    {
+        "id": 3,
+        "name": "Portugal T-Shirt",
+        "price": 100.00,
+        "description": "Football Team"
+    }
+]

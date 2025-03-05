@@ -1,54 +1,81 @@
 const { sequelize, Customer, Order, Product, OrderLineItem, OrderPayment, CustomerOrder } = require("./models");
+const productService = require('./services/productService');
+const orderService = require('./services/orderService');
+const fs = require('fs');
+const path = require('path');
+
+
+const readCustomersFromFile = () => {
+    const filePath = path.join(__dirname, 'dummyCustomers.json');
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+};
+
+
+const readProductsFromFile = () => {
+    const filePath = path.join(__dirname, 'dummyProducts.json');
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+};
 
 (async () => {
-  try {
-    await sequelize.sync({ force: true }); 
+    try {
+        await sequelize.sync({ force: true });
 
-    const customer = await Customer.create({
-      name: "Indranil Champati",
-      email: "indranil@gmail.com",
-    });
+        const products = readProductsFromFile();
+        await productService.upsertProducts(products);
 
-    const order = await Order.create({
-      customer_id: customer.id,
-      order_date: new Date(),
-    });
+        const customers = readCustomersFromFile();
+        console.log("Customers Array:", customers);
 
-    const product = await Product.create({
-      name: "Sample Product",
-      price: 19.99,
-    });
+        for (const customerData of customers) {
+            const customer = await Customer.create(customerData);
+            console.log("Created Customer:", customer.toJSON(), "Email:", customerData.email);
 
-    const orderLineItem = await OrderLineItem.create({
-      order_id: order.id,
-      product_id: product.id,
-      quantity: 2,
-      price: product.price,
-    });
+            console.log("Customer ID:", customer.id);
 
-    const orderPayment = await OrderPayment.create({
-      order_id: order.id,
-      payment_date: new Date(),
-      amount: orderLineItem.quantity * orderLineItem.price,
-    });
+            const orders = await orderService.getOrdersWithDetails(customer.id);
+            console.log("Completed Orders for Customer ID:", customer.id, JSON.stringify(orders, null, 2));
 
-    const customerOrder = await CustomerOrder.create({
-      customer_id: customer.id,
-      order_id: order.id,
-    });
+            for (const productData of products) {
+                const [product] = await Product.upsert({
+                    id: productData.id,
+                    name: productData.name,
+                    price: productData.price,
+                    description: productData.description || '',
+                });
 
-    console.log("Customer order created:", customerOrder.toJSON());
 
-    const orders = await Order.findAll({
-      where: { customer_id: customer.id },
-      include: [
-        { model: OrderLineItem, as: "order_line_items", include: [Product] },
-        { model: OrderPayment, as: "order_payments" },
-      ],
-    });
+                const order = await Order.create({
+                    customer_id: customer.id,
+                    order_date: new Date(),
+                    customer_name: customerData.name,
+                    product_name: productData.name,
+                });
 
-    console.log("Completed Orders:", JSON.stringify(orders, null, 2));
-  } catch (err) {
-    console.error("Error:", err);
-  }
+
+
+
+
+                const existingOrder = await CustomerOrder.findOne({
+                    where: {
+                        customer_id: customer.id,
+                        order_id: order.id,
+                    },
+                });
+
+                if (!existingOrder) {
+                    const customerOrder = await CustomerOrder.create({
+                        customer_id: customer.id,
+                        order_id: order.id,
+                        product_id: product.id,
+                        product_name: productData.name,
+                    });
+                    console.log("Customer order created:", customerOrder.toJSON());
+                }
+            }
+        }
+
+
+    } catch (err) {
+        console.error("Error:", err);
+    }
 })();

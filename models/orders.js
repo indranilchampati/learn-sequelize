@@ -12,10 +12,19 @@ const Order = dbSequelize.define("orders", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  order_date: {
-    type: DataTypes.DATE,
-    allowNull: false,
-  },
+        customer_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        order_date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        product_name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
 });
 
 Order.associate = (models) => {

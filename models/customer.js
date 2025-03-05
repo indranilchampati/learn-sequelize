@@ -1,9 +1,6 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../util/database");
 
-/**
- * Customer model
- */
 const Customer = sequelize.define("customers", {
   id: {
     type: DataTypes.INTEGER,
@@ -11,12 +8,16 @@ const Customer = sequelize.define("customers", {
     allowNull: false,
     primaryKey: true,
   },
-  /**
-   * Name of the customer.
-   */
+
   name: {
     type: DataTypes.STRING,
     allowNull: false,
+  },
+
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
   },
 });
 

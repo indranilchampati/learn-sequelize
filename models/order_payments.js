@@ -22,7 +22,6 @@ const OrderPayment = sequelize.define("order_payments", {
   },
 });
 
-// Define associations
 OrderPayment.associate = (models) => {
   OrderPayment.belongsTo(models.Order, { foreignKey: 'order_id' });
 };

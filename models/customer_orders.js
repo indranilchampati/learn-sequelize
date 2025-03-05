@@ -3,6 +3,15 @@ const sequelize = require("../util/database");
 const logger = require("../util/logger");
 
 const CustomerOrder = sequelize.define("customer_orders", {
+  product_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  product_name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -19,7 +28,6 @@ const CustomerOrder = sequelize.define("customer_orders", {
   },
 });
 
-// Remove the associate method here mod/index.js
 
 CustomerOrder.beforeCreate(() => logger.info("Creating new CustomerOrder instance"));
 CustomerOrder.afterCreate(() => logger.info("CustomerOrder instance created successfully"));
