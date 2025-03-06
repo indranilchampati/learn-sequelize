@@ -20,7 +20,7 @@ const Product = sequelize.define("products", {
 
 // Define associations
 Product.associate = (models) => {
-  Product.hasMany(models.OrderLineItem, { foreignKey: 'product_id' });
+  Product.hasMany(models.OrderLineItem, { foreignKey: "product_id" });
 };
 
 module.exports = Product;

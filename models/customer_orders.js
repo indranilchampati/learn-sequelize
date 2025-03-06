@@ -28,12 +28,23 @@ const CustomerOrder = sequelize.define("customer_orders", {
   },
 });
 
-
-CustomerOrder.beforeCreate(() => logger.info("Creating new CustomerOrder instance"));
-CustomerOrder.afterCreate(() => logger.info("CustomerOrder instance created successfully"));
-CustomerOrder.beforeUpdate(() => logger.info("Updating CustomerOrder instance"));
-CustomerOrder.afterUpdate(() => logger.info("CustomerOrder instance updated successfully"));
-CustomerOrder.beforeDestroy(() => logger.info("Deleting CustomerOrder instance"));
-CustomerOrder.afterDestroy(() => logger.info("CustomerOrder instance deleted successfully"));
+CustomerOrder.beforeCreate(() =>
+  logger.info("Creating new CustomerOrder instance")
+);
+CustomerOrder.afterCreate(() =>
+  logger.info("CustomerOrder instance created successfully")
+);
+CustomerOrder.beforeUpdate(() =>
+  logger.info("Updating CustomerOrder instance")
+);
+CustomerOrder.afterUpdate(() =>
+  logger.info("CustomerOrder instance updated successfully")
+);
+CustomerOrder.beforeDestroy(() =>
+  logger.info("Deleting CustomerOrder instance")
+);
+CustomerOrder.afterDestroy(() =>
+  logger.info("CustomerOrder instance deleted successfully")
+);
 
 module.exports = CustomerOrder;

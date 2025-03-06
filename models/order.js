@@ -2,13 +2,13 @@ const Sequelize = require("sequelize");
 
 const sequelize = require("../util/database");
 
-const Order = sequelize.define("order", {  
+const Order = sequelize.define("order", {
   customerId: {
     type: Sequelize.INTEGER,
     allowNull: false,
     references: {
-      model: 'customers', // refers to the Customer model
-      key: 'id',          // refers to the id field in the Customer model
+      model: "customers", // refers to the Customer model
+      key: "id", // refers to the id field in the Customer model
     },
   },
 
