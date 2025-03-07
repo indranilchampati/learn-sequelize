@@ -111,7 +111,7 @@ const readProductsFromFile = () => {
 
     console.log("Bulk inserting order payments...");
     await OrderPayment.bulkCreate(orderPaymentsData);
-    console.log("Order payments inserted successfully!");
+    console.log("Order payments inserted successfully!",orderPaymentsData);
 
     console.log("All bulk operations completed successfully!");
   } catch (err) {

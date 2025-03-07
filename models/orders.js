@@ -11,6 +11,10 @@ const Order = dbSequelize.define("orders", {
   customer_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+    validate: {
+      isInt: { msg: "Customer ID must be an integer." },
+      min: { args: [1], msg: "Customer ID must be a positive integer." },
+    },
   },
   customer_name: {
     type: DataTypes.STRING,
@@ -19,6 +23,9 @@ const Order = dbSequelize.define("orders", {
   order_date: {
     type: DataTypes.DATE,
     allowNull: false,
+    validate: {
+      isDate: { msg: "Order date must be a valid date." },
+    },
   },
   product_name: {
     type: DataTypes.STRING,
