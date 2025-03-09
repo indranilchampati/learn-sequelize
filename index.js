@@ -101,17 +101,19 @@ const readProductsFromFile = () => {
       });
     });
 
-    console.log("Bulk inserting customer orders...");
-    await CustomerOrder.bulkCreate(customerOrdersData);
-    console.log("Customer orders inserted successfully!");
+    await sequelize.transaction(async (t) => {
+      console.log("Bulk inserting customer orders...");
+      await CustomerOrder.bulkCreate(customerOrdersData, { transaction: t });
+      console.log("Customer orders inserted successfully!");
 
-    console.log("Bulk inserting order line items...");
-    await OrderLineItem.bulkCreate(orderLineItemsData);
-    console.log("Order line items inserted successfully!");
+      console.log("Bulk inserting order line items...");
+      await OrderLineItem.bulkCreate(orderLineItemsData, { transaction: t });
+      console.log("Order line items inserted successfully!");
 
-    console.log("Bulk inserting order payments...");
-    await OrderPayment.bulkCreate(orderPaymentsData);
-    console.log("Order payments inserted successfully!",orderPaymentsData);
+      console.log("Bulk inserting order payments...");
+      await OrderPayment.bulkCreate(orderPaymentsData, { transaction: t });
+      console.log("Order payments inserted successfully!", orderPaymentsData);
+    });
 
     console.log("All bulk operations completed successfully!");
   } catch (err) {
