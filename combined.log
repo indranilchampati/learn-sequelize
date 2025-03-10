@@ -523,3 +523,162 @@
 {"level":"info","message":"CustomerOrder instance created successfully","timestamp":"2025-03-06T16:07:17.974Z"}
 {"level":"info","message":"CustomerOrder instance created successfully","timestamp":"2025-03-06T16:07:17.980Z"}
 {"level":"info","message":"CustomerOrder instance created successfully","timestamp":"2025-03-06T16:07:17.985Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:13:36.831Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:15:40.767Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:15:41.992Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:15:41.993Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:15:41.995Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:15:42.027Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:15:42.028Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:15:42.029Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:15:42.030Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:15:42.051Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:15:42.052Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:15:42.115Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:17:31.897Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:17:33.040Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:17:33.041Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:17:33.042Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:17:33.067Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:17:33.069Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:17:33.069Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:17:33.070Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:17:33.089Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:17:33.090Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:17:33.145Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:17:33.146Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:23:18.668Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:23:20.190Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:23:20.191Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:23:20.194Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:23:20.223Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:23:20.225Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:23:20.226Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:23:20.227Z"}
+{"level":"info","message":"Inserting customers...","timestamp":"2025-03-10T11:23:20.228Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:23:20.248Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:23:20.249Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:23:20.250Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:23:20.251Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:23:20.272Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:23:20.273Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:23:20.316Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:23:20.317Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:24:50.214Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:24:51.254Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:24:51.255Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:24:51.257Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:24:51.292Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:24:51.293Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:24:51.294Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:24:51.295Z"}
+{"level":"info","message":"Inserting customers","timestamp":"2025-03-10T11:24:51.296Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:24:51.331Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:24:51.332Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:24:51.333Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:24:51.334Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:24:51.368Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:24:51.369Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:24:51.417Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:24:51.418Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:25:57.005Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:25:58.113Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:25:58.114Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:25:58.116Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:25:58.142Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:25:58.143Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:25:58.143Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:25:58.144Z"}
+{"level":"info","message":"Inserting customers","timestamp":"2025-03-10T11:25:58.145Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:25:58.160Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:25:58.163Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:25:58.164Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:25:58.165Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:25:58.180Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:25:58.182Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:25:58.212Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:25:58.214Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:29:32.376Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:29:33.446Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:29:33.447Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:29:33.449Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:29:33.476Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:29:33.477Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:29:33.479Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:29:33.480Z"}
+{"0":{"email":"indranil@gmail.com","name":"indranil"},"1":{"email":"Indrajeet@gmail.com","name":"Indrajeet"},"2":{"email":"sachin@example.com","name":"Sachin"},"level":"info","message":"in CS file HEREEE","timestamp":"2025-03-10T11:29:33.481Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:29:33.498Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:29:33.499Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:29:33.500Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:29:33.501Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:29:33.522Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:29:33.524Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:29:33.563Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:29:33.564Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:29:47.990Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:29:49.152Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:29:49.153Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:29:49.155Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:29:49.181Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:29:49.182Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:29:49.183Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:29:49.184Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:29:49.200Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:29:49.202Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:29:49.202Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:29:49.203Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:29:49.219Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:29:49.220Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:29:49.250Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:29:49.251Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:30:08.427Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:30:09.526Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:30:09.527Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:30:09.528Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:30:09.553Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:30:09.554Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:30:09.555Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:30:09.556Z"}
+{"0":{"email":"indranil@gmail.com","name":"indranil"},"1":{"email":"Indrajeet@gmail.com","name":"Indrajeet"},"2":{"email":"sachin@example.com","name":"Sachin"},"level":"info","message":"in CS file HEREEE","timestamp":"2025-03-10T11:30:09.559Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:30:09.576Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:30:09.577Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:30:09.578Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:30:09.579Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:30:09.599Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:30:09.601Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:30:09.636Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:30:09.636Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:30:29.608Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:30:30.627Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:30:30.628Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:30:30.630Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:30:30.654Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:30:30.655Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:30:30.657Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:30:30.658Z"}
+{"level":"info","message":"in CS file HEREEE","timestamp":"2025-03-10T11:30:30.658Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:30:30.676Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:30:30.677Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:30:30.678Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:30:30.679Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:30:30.695Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:30:30.696Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:30:30.727Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:30:30.727Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T11:35:36.986Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T11:35:38.131Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T11:35:38.131Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T11:35:38.133Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:35:38.162Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T11:35:38.164Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T11:35:38.165Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T11:35:38.165Z"}
+{"level":"info","message":"in CS file HEREEE","timestamp":"2025-03-10T11:35:38.166Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T11:35:38.185Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T11:35:38.186Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T11:35:38.187Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T11:35:38.188Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T11:35:38.207Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:35:38.208Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:35:38.243Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:35:38.244Z"}

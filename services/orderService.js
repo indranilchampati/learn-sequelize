@@ -1,58 +1,72 @@
-const { Order, OrderLineItem, CustomerOrder } = require("../models");
-const sequelize = require("sequelize");
+const {
+  Order,
+  OrderLineItem,
+  OrderPayment,
+  CustomerOrder,
+} = require("../models");
+const sequelize = require("../models").sequelize;
+const logger = require("../util/logger");
 
-const updateOrder = async (orderId, updateData) => {
-  return await Order.update(updateData, {
-    where: { id: orderId },
+const generateAndInsertOrders = async (customers, products) => {
+  let ordersData = [];
+  let orderLineItemsData = [];
+  let customerOrdersData = [];
+  let orderPaymentsData = [];
+
+  logger.info("Preparing order data...");
+  customers.forEach((customer) => {
+    const orderEntries = products.map((product) => ({
+      customer_id: customer.id,
+      order_date: new Date(),
+      customer_name: customer.name,
+      product_name: product.name,
+      quantity: 1,
+      price: product.price,
+      total_price: product.price * 1,
+    }));
+    ordersData.push(...orderEntries);
   });
-};
 
-const deleteOrder = async (orderId) => {
-  return await Order.destroy({
-    where: { id: orderId },
+  logger.info("Bulk inserting orders...");
+  const createdOrders = await Order.bulkCreate(ordersData, { returning: true });
+
+  logger.info("Preparing related order details...");
+  createdOrders.forEach((order) => {
+    const productData = products.find((p) => p.name === order.product_name);
+
+    customerOrdersData.push({
+      customer_id: order.customer_id,
+      order_id: order.id,
+      product_id: productData.id,
+      product_name: productData.name,
+    });
+
+    orderLineItemsData.push({
+      order_id: order.id,
+      product_id: productData.id,
+      quantity: 1,
+      product_name: productData.name,
+      price: productData.price,
+      total_price: productData.price * 1,
+    });
+
+    orderPaymentsData.push({
+      order_id: order.id,
+      amount: productData.price,
+      payment_date: new Date(),
+    });
   });
-};
 
-const getOrdersWithDetails = async (customerId) => {
-  return await Order.findAll({
-    where: { customer_id: customerId },
-    include: [
-      {
-        model: OrderLineItem,
-        as: "order_line_items",
-        attributes: ["id", "quantity"],
-      },
-    ],
+  logger.info("Performing bulk inserts with transaction...");
+  await sequelize.transaction(async (t) => {
+    await CustomerOrder.bulkCreate(customerOrdersData, { transaction: t });
+    await OrderLineItem.bulkCreate(orderLineItemsData, { transaction: t });
+    await OrderPayment.bulkCreate(orderPaymentsData, { transaction: t });
   });
+
+  logger.info("All order-related records inserted successfully!", "till here");
 };
-
-const getGroupedOrders = async () => {
-  return await Order.findAll({
-    attributes: [
-      "customer_id",
-      [sequelize.fn("COUNT", sequelize.col("id")), "orderCount"],
-    ],
-    group: ["customer_id"],
-    order: [[sequelize.fn("COUNT", sequelize.col("id")), "DESC"]],
-  });
-};
-
-const addProductToOrder = async (customerId, orderId, products) => {
-  const customerOrderData = products.map((product) => ({
-    customer_id: customerId,
-    order_id: orderId,
-    product_id: product.id,
-    product_name: product.name,
-  }));
-
-  return await CustomerOrder.bulkCreate(customerOrderData);
-};
-
 
 module.exports = {
-  updateOrder,
-  deleteOrder,
-  getOrdersWithDetails,
-  getGroupedOrders,
-  addProductToOrder,
+  generateAndInsertOrders,
 };

@@ -1,46 +1,37 @@
 const { Product } = require("../models");
 const logger = require("../util/logger");
 
-const fs = require("fs");
-const path = require("path");
+const upsertProducts = async (products) => {
+  if (!products || products.length === 0) {
+    logger.warn("No valid products to upsert.");
+    return;
+  }
 
-const upsertProducts = async () => {
   try {
-    const filePath = path.join(__dirname, "../dummyProducts.json");
-    const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-
-    const filteredData = data.filter(
-      (product) => product.name && product.price
-    ); // Null checks
-    if (filteredData.length === 0) {
-      logger.warn("No valid products to upsert.");
-    }
-
-    await Product.bulkCreate(filteredData, {
+    await Product.bulkCreate(products, {
       updateOnDuplicate: ["name", "price"],
     });
+    logger.info("Products upserted successfully!");
   } catch (error) {
     logger.error("Error upserting products: ", error);
-    throw error;
+    throw new Error("Failed to upsert products");
   }
 };
 
 const getProducts = async () => {
   try {
-    return await Product.findAll({
-      attributes: ["id", "name"],
-    });
+    return await Product.findAll({ attributes: ["id", "name"] });
   } catch (error) {
     logger.error("Error fetching products: ", error);
-    throw error;
+    throw new Error("Failed to fetch products");
   }
 };
 
 const getProductById = async (productId) => {
   try {
-    return await Product.findOne({
-      where: { id: productId },
-    });
+    const product = await Product.findOne({ where: { id: productId } });
+    if (!product) throw new Error(`Product with ID ${productId} not found`);
+    return product;
   } catch (error) {
     logger.error(`Error fetching product with ID ${productId}: `, error);
     throw error;
