@@ -2,8 +2,7 @@ const { Customer } = require("../models");
 const logger = require("../util/logger");
 
 const insertCustomers = async (customers) => {
-  logger.info("in CS file HEREEE");
-  console.log(customers);
+  logger.info("Inserting customers..");
 
   try {
     return await Customer.bulkCreate(customers, { returning: true });

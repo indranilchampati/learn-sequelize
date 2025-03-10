@@ -682,3 +682,20 @@
 {"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T11:35:38.208Z"}
 {"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T11:35:38.243Z"}
 {"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T11:35:38.244Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-10T13:13:07.034Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-10T13:13:08.054Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-10T13:13:08.055Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-10T13:13:08.057Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T13:13:08.088Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-10T13:13:08.089Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-10T13:13:08.091Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-10T13:13:08.092Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-10T13:13:08.092Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-10T13:13:08.129Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-10T13:13:08.130Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-10T13:13:08.130Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-10T13:13:08.131Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-10T13:13:08.152Z"}
+{"level":"info","message":"Performing bulk inserts with transaction...","timestamp":"2025-03-10T13:13:08.153Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-10T13:13:08.210Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-10T13:13:08.211Z"}
