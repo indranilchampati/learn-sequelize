@@ -11,7 +11,6 @@ const CustomerOrder = sequelize.define("customer_orders", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -25,6 +24,10 @@ const CustomerOrder = sequelize.define("customer_orders", {
   order_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
+  },
+  customername: {
+    type: DataTypes.STRING,
+    allowNull: false, // Assuming the customer name is required
   },
 });
 

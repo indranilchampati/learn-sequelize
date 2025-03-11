@@ -7,6 +7,12 @@ const {
 const sequelize = require("../models").sequelize;
 const logger = require("../util/logger");
 
+const descriptions = ["Fast delivery", "Limited edition", "Best seller"];
+
+const getRandomDescription = () => {
+  return descriptions[Math.floor(Math.random() * descriptions.length)];
+};
+
 const generateAndInsertOrders = async (customers, products) => {
   logger.info("Preparing order data...");
 
@@ -47,16 +53,20 @@ const generateAndInsertOrders = async (customers, products) => {
   createdOrders.reduce(
     (acc, order) => {
       const productData = productMap.get(order.product_name);
-      if (!productData) return acc;
+      const customerData = customers.find((c) => c.id === order.customer_id);
+      if (!productData || !customerData) return acc;
 
       acc.customerOrdersData.push({
         customer_id: order.customer_id,
         order_id: order.id,
         product_id: productData.id,
         product_name: productData.name,
+        customername: customerData.name,
       });
 
       acc.orderLineItemsData.push({
+        description: getRandomDescription(), // trying to use random
+
         order_id: order.id,
         product_id: productData.id,
         quantity: 1,
@@ -67,8 +77,10 @@ const generateAndInsertOrders = async (customers, products) => {
 
       acc.orderPaymentsData.push({
         order_id: order.id,
-        amount: productData.price,
+        amount: productData.price * 1,
+
         payment_date: new Date(),
+        quantity: order.quantity,
       });
 
       return acc;

@@ -767,3 +767,135 @@
 {"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T03:11:00.065Z"}
 {"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T03:11:00.085Z"}
 {"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T03:11:00.086Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T05:55:55.075Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T05:55:56.564Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T05:55:56.565Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T05:55:56.567Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T05:55:56.598Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T05:55:56.600Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T05:55:56.601Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T05:55:56.603Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T05:55:56.605Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T05:55:56.627Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T05:55:56.629Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T05:55:56.630Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T05:55:56.632Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T05:55:56.654Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T05:55:56.657Z"}
+{"level":"error","message":"Error occurred: Field 'customername' doesn't have a default value","name":"SequelizeDatabaseError","original":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sql":"INSERT INTO `customer_orders` (`product_id`,`product_name`,`id`,`customer_id`,`order_id`,`createdAt`,`updatedAt`) VALUES (1,'India T-Shirt',NULL,1,1,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,1,2,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,1,3,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(1,'India T-Shirt',NULL,2,4,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,2,5,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,2,6,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(1,'India T-Shirt',NULL,3,7,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,3,8,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,3,9,'2025-03-11 05:55:56','2025-03-11 05:55:56');","sqlMessage":"Field 'customername' doesn't have a default value","sqlState":"HY000"},"parameters":{},"parent":{"code":"ER_NO_DEFAULT_FOR_FIELD","errno":1364,"sql":"INSERT INTO `customer_orders` (`product_id`,`product_name`,`id`,`customer_id`,`order_id`,`createdAt`,`updatedAt`) VALUES (1,'India T-Shirt',NULL,1,1,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,1,2,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,1,3,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(1,'India T-Shirt',NULL,2,4,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,2,5,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,2,6,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(1,'India T-Shirt',NULL,3,7,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,3,8,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,3,9,'2025-03-11 05:55:56','2025-03-11 05:55:56');","sqlMessage":"Field 'customername' doesn't have a default value","sqlState":"HY000"},"sql":"INSERT INTO `customer_orders` (`product_id`,`product_name`,`id`,`customer_id`,`order_id`,`createdAt`,`updatedAt`) VALUES (1,'India T-Shirt',NULL,1,1,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,1,2,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,1,3,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(1,'India T-Shirt',NULL,2,4,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,2,5,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,2,6,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(1,'India T-Shirt',NULL,3,7,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(2,'Germany T-Shirt',NULL,3,8,'2025-03-11 05:55:56','2025-03-11 05:55:56'),(3,'Portugal T-Shirt',NULL,3,9,'2025-03-11 05:55:56','2025-03-11 05:55:56');","stack":"Error\n    at Query.run (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:52:25)\n    at D:\\learn-sequelize\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MySQLQueryInterface.bulkInsert (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:346:21)\n    at async recursiveBulkCreate (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\model.js:1697:25)\n    at async customer_orders.bulkCreate (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\model.js:1786:12)\n    at async Promise.all (index 0)\n    at async D:\\learn-sequelize\\services\\orderService.js:81:5\n    at async D:\\learn-sequelize\\node_modules\\sequelize\\lib\\sequelize.js:507:18\n    at async Object.generateAndInsertOrders (D:\\learn-sequelize\\services\\orderService.js:80:3)","timestamp":"2025-03-11T05:55:56.698Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T05:57:14.754Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T05:57:16.262Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T05:57:16.263Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T05:57:16.265Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T05:57:16.299Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T05:57:16.300Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T05:57:16.301Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T05:57:16.302Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T05:57:16.303Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T05:57:16.326Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T05:57:16.327Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T05:57:16.328Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T05:57:16.329Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T05:57:16.349Z"}
+{"level":"error","message":"Error occurred: customer is not defined","stack":"ReferenceError: customer is not defined\n    at createdOrders.reduce.customerOrdersData.customerOrdersData (D:\\learn-sequelize\\services\\orderService.js:57:23)\n    at Array.reduce (<anonymous>)\n    at Object.generateAndInsertOrders (D:\\learn-sequelize\\services\\orderService.js:47:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async D:\\learn-sequelize\\index.js:34:5","timestamp":"2025-03-11T05:57:16.353Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T05:58:25.218Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T05:58:26.763Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T05:58:26.764Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T05:58:26.766Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T05:58:26.796Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T05:58:26.797Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T05:58:26.798Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T05:58:26.799Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T05:58:26.799Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T05:58:26.817Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T05:58:26.818Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T05:58:26.819Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T05:58:26.820Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T05:58:26.849Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T05:58:26.851Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T05:58:26.890Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T05:58:26.893Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T06:01:20.183Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T06:01:21.835Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T06:01:21.836Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T06:01:21.837Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:01:21.872Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:01:21.873Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T06:01:21.874Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T06:01:21.875Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T06:01:21.877Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T06:01:21.907Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T06:01:21.907Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T06:01:21.908Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T06:01:21.909Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T06:01:21.931Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T06:01:21.934Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T06:01:21.970Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T06:01:21.971Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T06:04:00.504Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T06:04:02.029Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T06:04:02.031Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T06:04:02.032Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:04:02.061Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:04:02.062Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T06:04:02.063Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T06:04:02.064Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T06:04:02.065Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T06:04:02.085Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T06:04:02.086Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T06:04:02.087Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T06:04:02.088Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T06:04:02.108Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T06:04:02.110Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T06:04:02.143Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T06:04:02.144Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T06:05:11.673Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T06:05:13.435Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T06:05:13.437Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T06:05:13.439Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:05:13.500Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:05:13.502Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T06:05:13.503Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T06:05:13.504Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T06:05:13.505Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T06:05:13.536Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T06:05:13.549Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T06:05:13.551Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T06:05:13.552Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T06:05:13.581Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T06:05:13.584Z"}
+{"level":"error","message":"Error occurred: Unknown column 'NaN' in 'field list'","name":"SequelizeDatabaseError","original":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sql":"INSERT INTO `order_payments` (`id`,`order_id`,`payment_date`,`amount`,`createdAt`,`updatedAt`) VALUES (NULL,1,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,2,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,3,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,4,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,5,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,6,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,7,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,8,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,9,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13');","sqlMessage":"Unknown column 'NaN' in 'field list'","sqlState":"42S22"},"parameters":{},"parent":{"code":"ER_BAD_FIELD_ERROR","errno":1054,"sql":"INSERT INTO `order_payments` (`id`,`order_id`,`payment_date`,`amount`,`createdAt`,`updatedAt`) VALUES (NULL,1,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,2,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,3,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,4,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,5,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,6,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,7,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,8,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,9,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13');","sqlMessage":"Unknown column 'NaN' in 'field list'","sqlState":"42S22"},"sql":"INSERT INTO `order_payments` (`id`,`order_id`,`payment_date`,`amount`,`createdAt`,`updatedAt`) VALUES (NULL,1,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,2,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,3,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,4,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,5,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,6,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,7,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,8,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13'),(NULL,9,'2025-03-11 06:05:13',NaN,'2025-03-11 06:05:13','2025-03-11 06:05:13');","stack":"Error\n    at Query.run (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:52:25)\n    at D:\\learn-sequelize\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async MySQLQueryInterface.bulkInsert (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:346:21)\n    at async recursiveBulkCreate (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\model.js:1697:25)\n    at async order_payments.bulkCreate (D:\\learn-sequelize\\node_modules\\sequelize\\lib\\model.js:1786:12)\n    at async Promise.all (index 2)\n    at async D:\\learn-sequelize\\services\\orderService.js:100:5\n    at async D:\\learn-sequelize\\node_modules\\sequelize\\lib\\sequelize.js:507:18\n    at async Object.generateAndInsertOrders (D:\\learn-sequelize\\services\\orderService.js:99:3)","timestamp":"2025-03-11T06:05:13.628Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T06:09:10.535Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T06:09:12.364Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T06:09:12.365Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T06:09:12.367Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:09:12.395Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:09:12.396Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T06:09:12.397Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T06:09:12.398Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T06:09:12.398Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T06:09:12.419Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T06:09:12.420Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T06:09:12.421Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T06:09:12.422Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T06:09:12.443Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T06:09:12.445Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T06:09:12.476Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T06:09:12.477Z"}
+{"level":"info","message":"Starting database sync...","timestamp":"2025-03-11T06:10:18.719Z"}
+{"level":"info","message":"Database sync completed!","timestamp":"2025-03-11T06:10:20.164Z"}
+{"level":"info","message":"Reading products from file...","timestamp":"2025-03-11T06:10:20.165Z"}
+{"level":"info","message":"Upserting products...","timestamp":"2025-03-11T06:10:20.167Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:10:20.199Z"}
+{"level":"info","message":"Products upserted successfully!","timestamp":"2025-03-11T06:10:20.201Z"}
+{"level":"info","message":"Reading customers from file...","timestamp":"2025-03-11T06:10:20.202Z"}
+{"level":"info","message":"Inserting customers into the database...","timestamp":"2025-03-11T06:10:20.202Z"}
+{"level":"info","message":"Inserting customers..","timestamp":"2025-03-11T06:10:20.203Z"}
+{"level":"info","message":"Customers inserted successfully!","timestamp":"2025-03-11T06:10:20.222Z"}
+{"level":"info","message":"Generating and inserting orders...","timestamp":"2025-03-11T06:10:20.223Z"}
+{"level":"info","message":"Preparing order data...","timestamp":"2025-03-11T06:10:20.224Z"}
+{"level":"info","message":"Bulk inserting orders...","timestamp":"2025-03-11T06:10:20.225Z"}
+{"level":"info","message":"Preparing related order details...","timestamp":"2025-03-11T06:10:20.246Z"}
+{"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T06:10:20.247Z"}
+{"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T06:10:20.278Z"}
+{"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T06:10:20.278Z"}
