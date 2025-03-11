@@ -899,3 +899,29 @@
 {"level":"info","message":"Performing bulk inserts within a transaction...","timestamp":"2025-03-11T06:10:20.247Z"}
 {"level":"info","message":"All order-related records inserted successfully!","timestamp":"2025-03-11T06:10:20.278Z"}
 {"level":"info","message":"All orders and related records inserted successfully!","timestamp":"2025-03-11T06:10:20.278Z"}
+{"level":"info","message":"Fetching all customers","timestamp":"2025-03-11T08:53:13.477Z"}
+{"level":"info","message":"Fetching all customers","timestamp":"2025-03-11T08:55:48.996Z"}
+{"level":"info","message":"Fetching all products","timestamp":"2025-03-11T08:56:49.681Z"}
+{"level":"info","message":"Fetching all orders","timestamp":"2025-03-11T08:57:19.051Z"}
+{"level":"info","message":"Fetching all products","timestamp":"2025-03-11T08:57:51.815Z"}
+{"level":"info","message":"Fetching product with ID: 2","timestamp":"2025-03-11T09:16:27.244Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:18:06.839Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:18:08.223Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:21:24.345Z"}
+{"level":"error","message":"Error creating order: Product not found","timestamp":"2025-03-11T09:21:24.415Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:21:27.203Z"}
+{"level":"error","message":"Error creating order: Product not found","timestamp":"2025-03-11T09:21:27.205Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:22:17.591Z"}
+{"level":"error","message":"Error creating order: Product not found","timestamp":"2025-03-11T09:22:17.591Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:22:23.968Z"}
+{"level":"error","message":"Error creating order: Product not found","timestamp":"2025-03-11T09:22:23.969Z"}
+{"level":"info","message":"Fetching product with ID: 2","timestamp":"2025-03-11T09:22:40.957Z"}
+{"level":"info","message":"Fetching all products","timestamp":"2025-03-11T09:22:44.869Z"}
+{"level":"info","message":"Creating a new order","timestamp":"2025-03-11T09:26:03.226Z"}
+{"level":"info","message":"Creating product: aa T-Shirt","timestamp":"2025-03-11T09:35:16.778Z"}
+{"level":"info","message":"Creating product: aa T-Shirt","timestamp":"2025-03-11T09:35:18.676Z"}
+{"level":"info","message":"Creating product: aa T-Shirt","timestamp":"2025-03-11T09:35:21.177Z"}
+{"level":"info","message":"Fetching all customers","timestamp":"2025-03-11T09:37:36.582Z"}
+{"level":"info","message":"Creating a new customer","timestamp":"2025-03-11T09:40:06.200Z"}
+{"level":"info","message":"Updating customer with ID: 4","timestamp":"2025-03-11T09:41:38.493Z"}
+{"level":"info","message":"Deleting customer with ID: 4","timestamp":"2025-03-11T09:42:13.486Z"}
