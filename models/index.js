@@ -15,11 +15,11 @@ const models = {
   CustomerOrder,
 };
 
-Object.keys(models).forEach((modelName) => {
+for (const modelName of Object.keys(models)) {
   if (models[modelName].associate) {
     models[modelName].associate(models);
   }
-});
+}
 
 module.exports = {
   sequelize,
